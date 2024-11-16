@@ -1,0 +1,9 @@
+.footer {
+  @include centerFlex(center);
+  padding: 2rem;
+  background: v.$mainColor;
+  min-height: 15dvh;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}

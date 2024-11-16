@@ -1,0 +1,57 @@
+.social {
+  width: 100%;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  overflow-x: hidden;
+  background-color: v.$cetacean-purple;
+  background: linear-gradient(
+      180deg,
+      rgb(20, 0, 48) 6%,
+      rgba(34, 2, 80, 0.103) 10%
+    ),
+    url("/img/cuadriculaDifuminada.png");
+  background-size: cover;
+  @media screen and (max-width: 980px) {
+    min-height: 200%;
+    overflow: hidden;
+    height: auto;
+  }
+}
+.social__grid {
+  padding: 0 1rem;
+  max-width: 1140px;
+  display: flex;
+  align-content: center;
+  width: 100%;
+  gap: 24px;
+  margin-top: 10px;
+}
+.social__item-1 {
+  width: 60%;
+}
+.social__item-2 {
+  width: 39%;
+}
+@media (max-width: 1002px) {
+  .social__grid {
+    flex-direction: column;
+    min-height: 100dvh;
+    padding: 1rem 2rem;
+  }
+  .social__item-1 {
+    width: 100%;
+  }
+  .social__item-2 {
+    width: 100%;
+  }
+
+  /* Asegurar que todos los elementos ocupen el 100% de la columna */
+  .social__grid > * {
+    width: 100%;
+  }
+}
+.social__item {
+  width: 100%;
+  height: fit-content;
+}

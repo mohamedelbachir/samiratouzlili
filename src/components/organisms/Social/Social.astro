@@ -1,0 +1,100 @@
+---
+import Title from "@atoms/Title/Title";
+import ContactFormMain from "@molecules/ContactFormContent/ContactFormMain.astro";
+import ToastNotification from "@src/components/atoms/ToastNotification/ToastNotification.astro";
+import SocialCard from "@src/components/molecules/SocialCard/SocialCard.astro";
+import Subtitle from "@src/components/atoms/Subtitle/Subtitle.astro";
+---
+
+<section id="social" class="social">
+  <Title titleDesc="Mes reseaux socials" clase="title-dark social__title" />
+  <div class="social__grid">
+    <!-- <div class="social__item social__item-1"></div>
+    <div class="social__item social__item-2"></div> -->
+    <div class="social__item social__item-1">
+      <SocialCard>
+        <ContactFormMain />
+      </SocialCard>
+    </div>
+    <div class="social__item social__item-2">
+      <SocialCard>
+        <Subtitle content="Mes reseaux sociaux" />
+        <div class="social-buttons">
+          <a href="#" class="social-button linkedin">
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png"
+              alt="LinkedIn"
+            />
+            <span>Connection sur LinkedIn</span>
+          </a>
+          <a href="#" class="social-button whatsapp">
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Whatsapp2_colored_svg-512.png"
+              alt="WhatsApp"
+            />
+            <span>Chat sur WhatsApp</span>
+          </a>
+          <a href="#" class="social-button telegram">
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png"
+              alt="Telegram"
+            />
+            <span>Message sur Telegram</span>
+          </a>
+          <a href="#" class="social-button facebook">
+            <img
+              src="https://cdn1.iconfinder.com/data/icons/social-media-2285/512/Colored_Facebook3_svg-512.png"
+              alt="Facebook"
+            />
+            <span>Suivez moi sur Facebook</span>
+          </a>
+        </div>
+      </SocialCard>
+    </div>
+  </div>
+</section>
+<ToastNotification />
+<style>
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .social-button:hover {
+    opacity: 0.8;
+  }
+
+  .social-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .linkedin {
+    background-color: #0077b5;
+  }
+  .whatsapp {
+    background-color: #25d366;
+  }
+  .telegram {
+    background-color: #0088cc;
+  }
+  .facebook {
+    background-color: #1877f2;
+  }
+</style>
